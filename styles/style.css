@@ -1,0 +1,297 @@
+/***** Gen Layout *****/
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+section {
+    width: 100%;
+    min-height: 100%;
+}
+p { padding: 0; margin: 0; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Vollkorn", "Times New Roman", serif;
+    padding-bottom: 50px;
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+}
+h1 { font-size: 230px; line-height: 110px;}
+h2 { font-size: 100px; line-height: 100px; padding-bottom: 40px;}
+h3 { font-size: 40px; line-height: 40px; }
+a { text-decoration: none; }
+a { color: inherit; }
+.italic { font-style: italic; }
+
+
+/***** Photos *****/
+.player {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+
+    visibility: hidden;
+}
+.photo {
+    position: absolute; 
+    z-index: 2; 
+    /* 1.25 ratio */
+    width: 250px;
+    height: 312px;
+    background-color: white;
+    -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+}
+.photo img {
+    opacity: .3;
+    width: 90%;
+    height: auto;
+    margin: 5% 5%;
+    -webkit-transition: all .6s ease;
+        -moz-transition: all .6s ease;
+        -o-transition: all .6s ease;
+        transition: all .6s ease;
+}
+.photo1 {
+    z-index: 2;
+    left: 60%;
+    top: 60%;
+    transform: rotate(12deg) translate(-50%, -50%);
+}
+.photo2 {
+    z-index: 3;
+    left: 50%;
+    top: 43%;
+    transform: rotate(15deg) translate(-50%, -50%);
+}
+.photo3 {
+    z-index: 2;
+    left: 40%;
+    top: 35%;
+    transform: rotate(-10deg) translate(-50%, -50%);
+}
+.photo4 {
+    z-index: 2;
+    left: 73%;
+    top: 32%;
+    transform: rotate(-18deg) translate(-50%, -50%);
+}
+.photo5 {
+    z-index: 4;
+    left: 49%;
+    top: 54%;
+    transform: rotate(-27deg) translate(-50%, -50%);
+}
+.photo6 {
+    z-index: 3;
+    left: 27%;
+    top: 55%;
+    transform: rotate(8deg) translate(-50%, -50%);
+}
+.photo1_move {
+    top: 125%;
+    left: 20%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.photo2_move {
+    top: 125%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.photo3_move {
+    top: 125%;
+    left: 80%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.photo4_move {
+    top: 175%;
+    left: 20%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.photo5_move {
+    top: 175%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.photo6_move {
+    top: 175%;
+    left: 80%;
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+.interactive:hover > img {
+    opacity: 1;
+}
+.interactive:hover {
+    width: 287px;
+    height: 359px;
+}
+.active {
+    width: 287px;
+    height: 359px;
+}
+.active > img {
+    opacity: 1;
+}
+
+/***** Header *****/
+#header {
+    position: relative;
+    background-color: #fffd38; /* #FFB6C1 */
+    color: #2f9665;
+    height: 100%;
+    overflow: hidden;   /* crop photo overflow */
+}
+#title-block {
+    position: relative;
+        top: 50%;
+        left: 10%;
+        transform: translate(0, -50%);
+        z-index: 5;
+    width: 80vw;
+        min-width: 300px;
+        max-width: 1200px;
+
+    text-align: left;
+}
+#button-down {
+    display: block;
+        width: 50px;
+        height: 50px;
+    background: url('../img/pixel_hand.png');
+        background-size: cover;
+    position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 5;
+    cursor: pointer;
+
+    transition: .1s ease;
+}
+#button-down:hover {
+    bottom: 20px;
+}
+
+
+/***** Main *****/
+#main {
+    background-color: #fee94e;
+    color: #fffd38;
+    -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+}
+
+
+/***** Footer *****/
+#footer {
+    position: relative;
+    background-color: #2f9665;
+    color: #fffd38;
+}
+#footer-content {
+    position: absolute;
+        bottom: 5vh;
+        left: 5vw;
+    width: 80%;
+        min-width: 300px;
+}
+#button-back {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    bottom: -10px;
+    cursor: pointer;
+    background: url('../img/pixel_hand_back.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+    transition: .1s ease;
+}
+#back-link:hover > h3 > #button-back {
+    left: -10px;
+}
+
+
+/********** Media Queries **********/
+@media (max-width: 800px) {
+    h1 { font-size: 170px; line-height: 80px;}
+    h2 { font-size: 70px; line-height: 70px; padding-bottom: 40px;}
+    h3 { font-size: 30px; line-height: 30px; }
+    .photo { 
+        width: 192px;
+        height: 240px;
+    }
+    .interactive:hover {
+        width: 215px;
+        height: 269px;
+    }
+    .active {
+        width: 215px;
+        height: 269px;
+    }
+
+}
+@media (max-width: 600px) {
+    h1 { font-size: 120px; line-height: 30px;}
+    h2 { font-size: 50px; line-height: 80px; padding-bottom: 20px;}
+    h3 { font-size: 25px; line-height: 25px; }
+    #main {
+        min-height: 600%;
+    }
+    .photo {  
+        width: 300px;
+        height: 375px;
+    }
+    .interactive:hover {
+        width: 344px;
+        height: 431px;
+    }
+    .active {
+        width: 344px;
+        height: 431px;
+    }
+    .photo1_move {
+        top: 150%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    .photo2_move {
+        top: 250%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    .photo3_move {
+        top: 350%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    .photo4_move {
+        top: 450%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    .photo5_move {
+        top: 550%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    .photo6_move {
+        top: 650%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+}
