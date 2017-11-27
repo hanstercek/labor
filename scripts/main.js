@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
         checkScrolling();
     });
     if ($(window).width() > 800) {
+        console.log('yep')
         $.scrollify({
             section: ".scroll"
         });
